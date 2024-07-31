@@ -1,0 +1,154 @@
+:root {
+  --clr-tomato: hsl(4, 100%, 67%);
+  --clr-dark-slate-grey: hsl(234, 29%, 20%);
+  --clr-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --clr-neutral-800: hsl(234, 29%, 20%);
+  --clr-neutral-700: hsl(235, 18%, 26%);
+  --clr-neutral-200: hsl(231, 7%, 60%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --clr-accent-400: hsl(4, 100%, 67%);
+  --clr-accent-500: hsl(347, 100%, 66%);
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-dark-slate-grey) !important;
+  font-family: "Roboto";
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--clr-charcoal-grey);
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+
+  li {
+    display: flex;
+    p {
+      padding: 0rem 1rem;
+    }
+  }
+}
+
+label {
+  font-size: 0.7rem;
+  color: var(--clr-charcoal-grey);
+  font-weight: 600;
+  line-height: 0.71875rem;
+  padding: 0.375rem;
+}
+
+input,
+#exampleInputEmail1::placeholder {
+  color: var(--clr-grey);
+}
+
+input {
+  margin-top: 0.3125rem !important;
+}
+
+
+#exampleInputEmail1::placeholder {
+  font-size: 0.84375rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.signup-card {
+  background-color: var(--clr-white) !important;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 850px;
+}
+
+@media (min-width: 650px) {
+  .signup-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+    margin-inline: 1rem;
+  }
+}
+
+.card-content {
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.card-img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  // margin-inline: auto;
+}
+
+.sub-btn {
+  margin-top: 1.5rem;
+  background-color: var(--clr-dark-slate-grey);
+  border: none;
+  padding-block: 1.09375rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.84375rem;
+  color: var(--clr-white);
+  display: inline-block;
+  border-radius: 4px;
+  border: 5px;
+  width: 100%;
+  font-weight: 600;
+}
+
+.sub-btn:hover,
+.sub-btn:focus-visible {
+  position: relative;
+  background-image: linear-gradient(
+    -90deg,
+    var(--clr-accent-400),
+    var(--clr-accent-500)
+  );
+}
+
+form {
+  isolation: isolate;
+}
+
+.sub-btn:hover::after,
+.sub-btn:focus-visible::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: inherit;
+  border-radius: inherit;
+  translate: 0 1.5rem;
+  filter: blur(1rem);
+  opacity: 0.5;
+}

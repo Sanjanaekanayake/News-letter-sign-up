@@ -1,0 +1,21 @@
+@import "../styles/main.scss";
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+@font-face {
+    font-family: 'Roboto';
+    src: 
+      local('Roboto Regular'),
+      url('../../public/assets/fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: 
+      local('Roboto Bold'),
+      url('../../public/assets/fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+  }
+  
+  
+ 
